@@ -29,7 +29,8 @@ function showSpeciesPage(traitsTabSet) {
     ////setup controls
     addAlerts();
     loadBhl();
-    loadTrove(SHOW_CONF.troveUrl, SHOW_CONF.scientificName, SHOW_CONF.synonyms, 'trove-integration','trove-result-list','previousTrove','nextTrove');
+    // SBDI: loadTrove crashes if it's not configured
+    //loadTrove(SHOW_CONF.troveUrl, SHOW_CONF.scientificName, SHOW_CONF.synonyms, 'trove-integration','trove-result-list','previousTrove','nextTrove');
     if (traitsTabSet && SHOW_CONF.kingdom == 'Plantae') {
         loadAusTraits();
     }
