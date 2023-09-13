@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+
+  ala-bie-hub:
+    image: sbdi/ala-bie-hub-dev
+    build:
+      context: .
+    ports:
+      - 8080:8080
+    volumes:
+      - ./sbdi/data/config/ala-bie-hub-config.yml:/data/ala-bie-hub/config/ala-bie-hub-config.yml

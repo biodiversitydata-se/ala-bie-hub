@@ -1,0 +1,174 @@
+grails:
+  serverURL: http://localhost:8080
+  cors:
+    enabled: true
+serverName: http://localhost:8080
+
+# CAS Config
+security:
+  cas:
+    casServerName: https://auth.biodiversitydata.se
+    uriFilterPattern: /admin.*,/alaAdmin.*
+    uriExclusionFilterPattern: /images.*,/css.*,/js.*,/less.*
+    appServerName: http://localhost:8080
+    casServerUrlPrefix: https://auth.biodiversitydata.se/cas
+    loginUrl: https://auth.biodiversitydata.se/cas/login
+    logoutUrl: https://auth.biodiversitydata.se/cas/logout
+    contextPath:
+    bypass: false
+    applyUriFiltersToTicketValidation: false
+    enabled: true
+  oidc:
+    enabled: false
+    clientId:
+    secret:
+    discoveryUri:
+  jwt:
+    enabled: false
+    discoveryUri:
+disableCAS: false
+userDetails:
+  url: https://auth.biodiversitydata.se/userdetails/
+
+# BIE index webservices
+bie:
+  baseURL: https://species.biodiversitydata.se
+  searchPath: /search
+  index:
+    url: https://species.biodiversitydata.se/ws
+
+# Query contexts - used to filter search results
+bieService:
+  baseUrl: https://species.biodiversitydata.se/ws
+  queryContext:
+  apiKey: c311ae5d-4a87-4702-88f2-7373dd2e2e4d
+biocacheService:
+  baseURL: https://records.biodiversitydata.se/ws
+  queryContext:
+
+# Header and footer
+headerAndFooter:
+  baseURL: https://static.biodiversitydata.se
+  version: 2
+
+ala:
+  baseURL: https://tools.biodiversitydata.se
+  image:
+    service:
+      url: https://images.biodiversitydata.se
+imageServiceBaseUrl: https://images.biodiversitydata.se
+allowedImageEditingRoles: ROLE_ADMIN,ROLE_EDITOR
+
+wikipedia:
+    url: https://en.wikipedia.org/api/rest_v1/page/html/
+    lang: en
+
+# Skin and layout
+skin:
+  homeUrl: https://tools.biodiversitydata.se
+  layout: generic
+  orgNameLong: Swedish Biodiversity Data Infrastructure
+  fluidLayout: false
+  orgNameShort: SBDI
+  favicon: https://static.biodiversitydata.se/favicon.ico
+
+languageCodesUrl: file:///data/ala-bie-hub/config/languages.json
+
+# Facets displayed on search page
+facets: idxtype,rank,locatedInHubCountry,imageAvailable,speciesGroup,taxonomicStatus,conservationStatusAUS_s,conservationStatusACT_s,conservationStatusNSW_s,conservationStatusQLD_s,conservationStatusVIC_s,conservationStatusTAS_s,conservationStatusSA_s,conservationStatusWA_s,conservationStatusNT_s
+
+# Tabs displayed on species page
+show:
+  tabs: overview,gallery,names,classification,records,literature,sequences,data-partners
+
+# ALA services
+biocache:
+  baseURL: https://records.biodiversitydata.se
+
+# Other ALA Services
+profileService:
+  baseURL:
+spatial:
+  baseURL: https://spatial.biodiversitydata.se
+collectory:
+  baseURL: https://collections.biodiversitydata.se
+  threatenedSpeciesCodesUrl: https://collections.biodiversitydata.se/public/showDataResource
+speciesList:
+  baseURL: https://lists.biodiversitydata.se
+  preferredSpeciesListDruid:
+  preferredListName:
+  apiKey:
+alerts:
+  baseUrl:
+regions:
+  baseURL: https://regions.biodiversitydata.se
+sightings:
+  url:
+layersService:
+  baseURL: https://spatial.biodiversitydata.se/ws
+imageServiceBaseURL: https://images.biodiversitydata.se
+image:
+  baseUrl: https://images.biodiversitydata.se
+  thumbnailUrl: https://images.biodiversitydata.se/image/proxyImageThumbnail?imageId=
+ausTraits:
+    baseURL:
+    homeURL:
+    sourceURL:
+    definitionsURL:
+
+# External Literature and reference sources
+synonymsTypes:
+literature:
+  bhl:
+    url: https://bhlidx.ala.org.au/select
+    api:
+    apikey:
+    fulltext:
+    pageSize: 200
+    extend:
+  genbank:
+    url: https://www.ncbi.nlm.nih.gov
+  scholar:
+    url: https://scholar.google.com
+  google:
+    url:
+  trove:
+    url:
+    api:
+    apikey:
+external:
+  blacklist:
+  #blacklist: file://{{ data_dir }}/{{ bie_hub }}/config/blacklist.json
+
+# Mapping options
+defaultDecimalLatitude: 62.23
+defaultDecimalLongitude: 16.19
+defaultZoomLevel: 4
+map:
+  default:
+    url: https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png
+  simpleMapButton: false
+  records:
+    colour: e6704c
+
+eol:
+  lang: en
+
+namematching:
+  serviceURL:
+
+dataquality:
+  baseUrl:
+
+speciesParent:
+
+supportEmail: gbif@nrm.se
+
+survey:
+    indexPage: false
+    searchPage: false
+    speciesPage: false
+    url:
+    header:
+    cookieAge: 30
+    html:
