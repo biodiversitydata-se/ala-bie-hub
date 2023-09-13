@@ -203,8 +203,9 @@ function insertSearchLinks(html) {
     // add content
     $("#related-searches ul").append(html);
     // sort by count
-    $('#related-searches ul li').sortElements(function(a, b){
-        return $(a).data("count") < $(b).data("count") ? 1 : -1;
-    });
+    // SBDI: sortElements() fails - possibly due to missing jquery plugin
+    //$('#related-searches ul li').sortElements(function(a, b){
+    //    return $(a).data("count") < $(b).data("count") ? 1 : -1;
+    //});
     $('#related-searches').removeClass('hide');
 }
