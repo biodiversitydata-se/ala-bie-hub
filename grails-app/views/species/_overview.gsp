@@ -134,6 +134,7 @@
                 </div>
             </div>
 
+            <!-- SBDI: disable subscribing to alerts
             <div class="panel panel-default panel-actions">
                 <div class="panel-body">
                     <ul class="list-unstyled">
@@ -151,6 +152,7 @@
                     </ul>
                 </div>
             </div>
+            -->
 
             <div class="panel panel-default panel-data-providers">
                 <div class="panel-heading">
