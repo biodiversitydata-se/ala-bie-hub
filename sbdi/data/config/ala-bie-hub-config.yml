@@ -120,16 +120,7 @@ ausTraits:
 synonymsTypes:
 literature:
   bhl:
-    url: https://bhlidx.ala.org.au/select
-    api:
-    apikey:
-    fulltext:
-    pageSize: 200
-    extend:
-  genbank:
-    url: https://www.ncbi.nlm.nih.gov
-  scholar:
-    url: https://scholar.google.com
+    apikey: 698e7e43-f9b0-4674-937b-c0ab4e42a7db
   google:
     url:
   trove:
