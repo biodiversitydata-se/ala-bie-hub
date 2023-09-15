@@ -6,7 +6,9 @@
                 <nav class="navbar navbar-default" role="navigation">
                     <ul class="nav nav-stacked">
                         <li><a href="#bhl-integration"><g:message code="bhl.title.bhl"/></a></li>
+                        <%-- SBDI: we don't use Trove
                         <li><a href="#trove-integration"><g:message code="bhl.title.trove"/></a></li>
+                        --%>
                     </ul>
                 </nav>
             </div>
@@ -23,6 +25,7 @@
                 </div>
             </div>
 
+            <%-- SBDI: we don't use Trove
             <div id="trove-integration" class="column-wrap" style="padding-top:50px;">
                 %{--<h2>&nbsp;</h2>--}%
                 <hr />
@@ -32,6 +35,7 @@
                     <!-- Search results go here -->
                 </div>
             </div>
+            --%>
         </div><!--/right-->
     </div><!--/row-->
 </section>
