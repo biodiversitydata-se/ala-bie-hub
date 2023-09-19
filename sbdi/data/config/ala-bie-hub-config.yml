@@ -132,6 +132,7 @@ external:
   #blacklist: file://{{ data_dir }}/{{ bie_hub }}/config/blacklist.json
 
 # Mapping options
+googleMapsApiKey: AIzaSyAJDtEeoy7Sc9pij2TAoVnmTwA34Q-2VHk
 defaultDecimalLatitude: 62.23
 defaultDecimalLongitude: 16.19
 defaultZoomLevel: 4
