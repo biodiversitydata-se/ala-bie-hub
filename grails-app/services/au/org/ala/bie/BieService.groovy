@@ -85,10 +85,12 @@ class BieService {
     }
 
     def getChildConceptsForGuid(guid) {
-        def url = grailsApplication.config.bie.index.url + "/childConcepts/" + guid.replaceAll(/\s+/,'+')
+        // SBDI: Added unranked=false since the call otherwise crashes sometimes (eg. Gastropoda).
+        // Unclear why, probably related to how the data is indexed.
+        def url = grailsApplication.config.bie.index.url + "/childConcepts/" + guid.replaceAll(/\s+/,'+') +  "?unranked=false"
 
         if(grailsApplication.config.bieService.queryContext){
-            url = url + "?" + URLEncoder.encode(grailsApplication.config.bieService.queryContext, "UTF-8")
+            url = url + "&" + URLEncoder.encode(grailsApplication.config.bieService.queryContext, "UTF-8")
         }
 
         def json = webClientService.getJson(url).sort() { it.rankID?:0 }
