@@ -91,7 +91,7 @@ class BieService {
             url = url + "?" + URLEncoder.encode(grailsApplication.config.bieService.queryContext, "UTF-8")
         }
 
-        def json = webClientService.getJson(url).sort() { it.rankID?:0 }
+        def json = webClientService.getJson(url).sort() { it.rankID?:Integer.MAX_VALUE }
 
         if (json instanceof JSONObject && json.has("error")) {
             log.warn "child concepts request error: " + json.error
