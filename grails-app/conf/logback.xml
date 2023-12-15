@@ -11,8 +11,7 @@
         </encoder>
     </appender>
 
-    <!-- SBDI: this is to get rid of noise in the logs -->
-    <logger name="org.grails.config.NavigableMap" level="ERROR" />
+    <logger name="org.grails.config.NavigableMap" level="ERROR"/>
 
     <root level="WARN">
         <appender-ref ref="STDOUT" />
