@@ -45,7 +45,7 @@ class WebClientService implements InitializingBean {
                 throw e
             else{
                 def error = [error: "Timed out calling web service. URL= ${url}."]
-                println error.error
+                log.error error.error
                 return new groovy.json.JsonBuilder( error ).toString()
             }
         } catch (Exception e) {
@@ -53,7 +53,7 @@ class WebClientService implements InitializingBean {
                 throw e;
             else{
                 def error = [error: "Failed calling web service. ${e.getClass()} ${e.getMessage()} URL= ${url}."]
-                println error.error
+                log.info error.error
                 return new groovy.json.JsonBuilder( error ).toString()
             }
         }
@@ -158,11 +158,11 @@ class WebClientService implements InitializingBean {
             return [error:  null, resp: JSON.parse(resp)]
         } catch (SocketTimeoutException e) {
             def error = [error: "Timed out calling web service POST. URL= ${url}."]
-            println error.error
+            log.error error.error
             return error
         } catch (Exception e) {
             def error = [error: "Failed calling web service POST. ${e.getClass()} ${e.getMessage()} ${e} URL= ${url}."]
-            println error.error
+            log.info error.error
             return error
         }
     }
