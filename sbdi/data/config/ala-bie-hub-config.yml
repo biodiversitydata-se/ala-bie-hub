@@ -18,6 +18,7 @@ security:
     bypass: false
     applyUriFiltersToTicketValidation: false
     enabled: true
+    authCookiename: ALA-Auth
   oidc:
     enabled: false
     clientId:
@@ -26,6 +27,19 @@ security:
   jwt:
     enabled: false
     discoveryUri:
+  apiKey:
+    enabled: true
+    auth:
+      serviceUrl: https://auth.biodiversitydata.se/apikey/
+    check:
+      serviceUrl: https://auth.biodiversitydata.se/apikey/ws/check?apikey=
+    userdetails:
+      serviceUrl: https://auth.biodiversitydata.se/userdetails/
+webservice:
+  jwt: false
+  jwt-scopes:
+  client-id:
+  client-secret:
 disableCAS: false
 userDetails:
   url: https://auth.biodiversitydata.se/userdetails/
@@ -56,7 +70,6 @@ ala:
   image:
     service:
       url: https://images.biodiversitydata.se
-imageServiceBaseUrl: https://images.biodiversitydata.se
 allowedImageEditingRoles: ROLE_ADMIN,ROLE_EDITOR
 
 wikipedia:
@@ -93,11 +106,15 @@ spatial:
 collectory:
   baseURL: https://collections.biodiversitydata.se
   threatenedSpeciesCodesUrl: https://collections.biodiversitydata.se/public/showDataResource
+collectoryService:
+  baseURL: https://collections.biodiversitydata.se
 speciesList:
   baseURL: https://lists.biodiversitydata.se
   preferredSpeciesListDruid:
   preferredListName:
   apiKey:
+speciesListService:
+  baseURL: https://lists.biodiversitydata.se
 alerts:
   baseUrl:
 regions:
@@ -107,9 +124,10 @@ sightings:
 layersService:
   baseURL: https://spatial.biodiversitydata.se/ws
 imageServiceBaseURL: https://images.biodiversitydata.se
+
 image:
   baseUrl: https://images.biodiversitydata.se
-  thumbnailUrl: https://images.biodiversitydata.se/image/proxyImageThumbnail?imageId=
+  thumbnailUrl: https://images.biodiversitydata.se/image/
 ausTraits:
     baseURL:
     homeURL:
@@ -164,3 +182,8 @@ survey:
     header:
     cookieAge: 30
     html:
+userdetails:
+  url: https://auth.biodiversitydata.se/userdetails
+imageFilter: '&fq=spatiallyValid:true&fq=-user_assertions:50001&fq=-user_assertions:50005&fq=-duplicate_status:ASSOCIATED&fq=-duplicateType:DIFFERENT_DATASET'
+userdetails.web.url: https://auth.biodiversitydata.se/userdetails/
+userdetails.api.url: https://auth.biodiversitydata.se/userdetails/
