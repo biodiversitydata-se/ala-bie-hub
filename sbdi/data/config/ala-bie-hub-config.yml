@@ -46,14 +46,16 @@ userDetails:
 
 # BIE index webservices
 bie:
-  baseURL: https://species.biodiversitydata.se
+  baseURL: http://localhost:8080
   searchPath: /search
   index:
     url: https://species.biodiversitydata.se/ws
+    #url: http://localhost:8081/ws
 
 # Query contexts - used to filter search results
 bieService:
   baseUrl: https://species.biodiversitydata.se/ws
+  #baseUrl: http://localhost:8081/ws
   queryContext:
   apiKey: c311ae5d-4a87-4702-88f2-7373dd2e2e4d
 biocacheService:
@@ -187,3 +189,10 @@ userdetails:
 imageFilter: '&fq=spatiallyValid:true&fq=-user_assertions:50001&fq=-user_assertions:50005&fq=-duplicate_status:ASSOCIATED&fq=-duplicateType:DIFFERENT_DATASET'
 userdetails.web.url: https://auth.biodiversitydata.se/userdetails/
 userdetails.api.url: https://auth.biodiversitydata.se/userdetails/
+
+vernacularName:
+  pull:
+    active: true
+    categories: common
+    label: Common names
+    showLanguage: true
