@@ -49,7 +49,14 @@ class ExternalSiteController {
     def genbank = {
         genbankRateLimiter.acquire()
         def searchStrings = params.list("s")
-        def searchParams = URLEncoder.encode("\"" + searchStrings.join("\" OR \"") + "\"", "UTF-8")
+        // SBDI:
+        // The upstream code always encloses the search term in quotes. This seems
+        // to break the html parsing of the result. Also, support for the query
+        // parameter 's' being a list seems to not be used by the client code.
+        // This changes the code to not add quotes when there is a single search term.
+        def searchParams0 = searchStrings.size() == 1
+                ? searchStrings[0] : ("\"" + searchStrings.join("\" OR \"") + "\"")
+        def searchParams = URLEncoder.encode(searchParams0, "UTF-8")
         def genbankBase = grailsApplication.config.literature?.genbank?.url ?: "https://www.ncbi.nlm.nih.gov"
         def url = (genbankBase + "/nuccore/?term=" + searchParams)
         log.debug "genbank URL = ${url}"
