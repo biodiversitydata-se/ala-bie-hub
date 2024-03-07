@@ -125,7 +125,7 @@ sightings:
   url:
 layersService:
   baseURL: https://spatial.biodiversitydata.se/ws
-imageServiceBaseURL: https://images.biodiversitydata.se
+imageServiceBaseUrl: https://images.biodiversitydata.se
 
 image:
   baseUrl: https://images.biodiversitydata.se
