@@ -17,13 +17,13 @@ security:
     contextPath:
     bypass: false
     applyUriFiltersToTicketValidation: false
-    enabled: true
+    enabled: false
     authCookiename: ALA-Auth
   oidc:
-    enabled: false
-    clientId:
-    secret:
-    discoveryUri:
+    enabled: true
+    clientId: replace_with_real_value
+    secret: replace_with_real_value
+    discoveryUri: https://auth.biodiversitydata.se/cas/oidc/.well-known
   jwt:
     enabled: false
     discoveryUri:
