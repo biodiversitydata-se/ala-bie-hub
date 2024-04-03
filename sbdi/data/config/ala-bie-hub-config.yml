@@ -115,6 +115,8 @@ speciesList:
   preferredSpeciesListDruid:
   preferredListName:
   apiKey:
+  useListWs: false
+  wsURL:
 speciesListService:
   baseURL: https://lists.biodiversitydata.se
 alerts:
@@ -189,6 +191,9 @@ userdetails:
 imageFilter: '&fq=spatiallyValid:true&fq=-user_assertions:50001&fq=-user_assertions:50005&fq=-duplicate_status:ASSOCIATED&fq=-duplicateType:DIFFERENT_DATASET'
 userdetails.web.url: https://auth.biodiversitydata.se/userdetails/
 userdetails.api.url: https://auth.biodiversitydata.se/userdetails/
+
+sitemap:
+  enabled: false
 
 vernacularName:
   pull:
