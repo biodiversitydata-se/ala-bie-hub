@@ -66,6 +66,7 @@ biocacheService:
 headerAndFooter:
   baseURL: https://static.biodiversitydata.se
   version: 2
+  challengeJsUrl:
 
 ala:
   baseURL: https://tools.biodiversitydata.se
@@ -127,6 +128,8 @@ sightings:
   url:
 layersService:
   baseURL: https://spatial.biodiversitydata.se/ws
+# Both are currently used
+imageServiceBaseURL: https://images.biodiversitydata.se
 imageServiceBaseUrl: https://images.biodiversitydata.se
 
 image:
