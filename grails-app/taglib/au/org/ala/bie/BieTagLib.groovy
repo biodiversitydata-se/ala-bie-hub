@@ -76,7 +76,7 @@ class BieTagLib implements GrailsConfigurationAware {
                 def author = incAuthor ? " <span class=\"author\">${pn.authorshipComplete()}</span>" : ""
                 n = "<span class=\"scientific-name rank-${r}\"><span class=\"name\">${pn.canonicalNameWithMarker()}</span>${author}</span>"
             } catch (Exception ex) {
-                log.warn "Error parsing name (${n}): ${ex}", ex
+                log.warn "Error parsing name (${n}): ${ex}"
             }
             n
         }
