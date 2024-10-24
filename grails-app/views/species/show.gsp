@@ -53,6 +53,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${tc?.taxonConcept?.nameString}<g:if test="${commonNameDisplay}"> : ${commonNameDisplay}</g:if> | ${raw(grailsApplication.config.skin.orgNameLong)}</title>
     <meta name="layout" content="${grailsApplication.config.skin.layout}"/>
+    <link rel="canonical" href="${grailsApplication.config.getProperty('grails.serverURL')}/species/${tc?.taxonConcept?.guid}" />
 
     <!-- facebook and twitter tags -->
     <g:render template="facebookTwitterTags"/>

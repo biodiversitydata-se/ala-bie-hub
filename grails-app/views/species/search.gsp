@@ -22,6 +22,7 @@
     <meta name="layout" content="${grailsApplication.config.skin.layout}"/>
     <title>${query} | <g:message code="search.title.search" /> | ${raw(grailsApplication.config.skin.orgNameLong)}</title>
     <meta name="breadcrumb" content="Search results"/>
+    <link rel="canonical" href="${grailsApplication.config.getProperty('grails.serverURL')}/search" />
     <asset:javascript src="search"/>
     <asset:javascript src="atlas"/>
     <asset:stylesheet src="atlas"/>
