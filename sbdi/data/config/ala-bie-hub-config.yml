@@ -175,8 +175,9 @@ namematching:
   serviceURL:
 
 dataquality:
-  baseUrl:
-qualityProfile:
+  enabled: true
+  baseUrl: https://data-quality-service.biodiversitydata.se/
+qualityProfile: SBDI
 
 speciesParent:
 
