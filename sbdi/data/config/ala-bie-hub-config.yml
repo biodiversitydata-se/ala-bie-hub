@@ -64,12 +64,12 @@ biocacheService:
 
 # Header and footer
 headerAndFooter:
-  baseURL: https://static.biodiversitydata.se
+  baseURL: https://bioatlas.biodiversitydata.se
   version: 2
   challengeJsUrl:
 
 ala:
-  baseURL: https://tools.biodiversitydata.se
+  baseURL: https://bioatlas.biodiversitydata.se
   image:
     service:
       url: https://images.biodiversitydata.se
@@ -81,12 +81,12 @@ wikipedia:
 
 # Skin and layout
 skin:
-  homeUrl: https://tools.biodiversitydata.se
+  homeUrl: https://bioatlas.biodiversitydata.se
   layout: generic
   orgNameLong: Swedish Biodiversity Data Infrastructure
   fluidLayout: false
   orgNameShort: SBDI
-  favicon: https://static.biodiversitydata.se/favicon.ico
+  favicon: https://bioatlas.biodiversitydata.se/favicon.ico
 
 languageCodesUrl: file:///data/ala-bie-hub/config/languages.json
 
