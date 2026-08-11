@@ -47,6 +47,8 @@ class ExternalSiteController {
     }
 
     def genbank = {
+        response.status = 204
+        /*
         genbankRateLimiter.acquire()
         def searchStrings = params.list("s")
         // SBDI:
@@ -81,6 +83,7 @@ class ExternalSiteController {
         }
         response.setContentType("application/json")
         render ([total:totalResults, resultsUrl:url, results:formattedResults] as JSON)
+         */
     }
 
     def bhl() {

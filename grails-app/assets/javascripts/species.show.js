@@ -577,6 +577,7 @@ function loadExternalSources() {
         }
     }
 
+    /*
     //load Genbank content
     $.ajax({url: SHOW_CONF.genbankUrl}).done(function (data) {
         if (data.total) {
@@ -594,6 +595,7 @@ function loadExternalSources() {
             }
         }
     });
+    */
 
     //load sound content
     $.ajax({url: SHOW_CONF.soundUrl}).done(function (data) {
